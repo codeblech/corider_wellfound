@@ -1,5 +1,3 @@
-Here's a draft README.md for your project:
-
 # Flask User Management API
 
 A RESTful API built with Flask and MongoDB that handles user management operations. The API provides secure endpoints for creating, reading, updating, and deleting user resources with JWT authentication and proper input validation.
