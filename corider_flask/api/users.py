@@ -1,7 +1,6 @@
 from flask import request, current_app
 from flask_restx import Namespace, Resource, fields
 from bson import ObjectId
-import base64
 from corider_flask.models.user import User
 from corider_flask.utils.validators import validate_email_format
 
@@ -91,5 +90,3 @@ class UserResource(Resource):
             api.abort(404, "User not found")
         except Exception:
             api.abort(400, "Invalid ID format")
-
-
