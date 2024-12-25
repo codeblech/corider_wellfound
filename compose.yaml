@@ -1,28 +1,27 @@
-version: "3.8"
+#version: '3.8'
 
 services:
-  flask_app:
-    build:
+  api:
+    build: 
       context: .
       dockerfile: Dockerfile
     ports:
-      - "8000:8000"
+      - "5000:5000"
     environment:
-      - FLASK_ENV=production
-      - MONGO_URI=mongodb://mongo:27017/
-      - MONGO_DB=user_db
+      - FLASK_ENV=development
+      - MONGODB_URI=mongodb://mongo:27017/
+      - MONGODB_DB=user_management
+      - JWT_SECRET_KEY=${JWT_SECRET_KEY}
     depends_on:
       - mongo
 
   mongo:
     image: mongo:6.0
-    environment:
-      - MONGO_INITDB_ROOT_USERNAME: root
-      - MONGO_INITDB_ROOT_PASSWORD: example
+    
     ports:
       - "27017:27017"
     volumes:
-      - mongo-data:/data/db
+      - mongodb_data:/data/db
 
 volumes:
-  mongo-data:
+  mongodb_data:
