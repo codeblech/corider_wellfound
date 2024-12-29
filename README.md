@@ -12,7 +12,7 @@ A RESTful API built with Flask and MongoDB that handles user management operatio
 
 ### Database
 - **MongoDB**: Document database that provides flexibility for future schema changes
-- **flask-pymongo**: Flask integration for MongoDB with convenient access patterns
+- **pymongo**: Python driver for MongoDB
 
 ### Security
 - **passlib**: Password hashing using PBKDF2-SHA256 (chosen over bcrypt due to better performance characteristics on modern hardware)
