@@ -29,11 +29,11 @@ python -c 'import secrets; print(secrets.token_hex(64))'
 2. Create `.env` file with key `JWT_SECRET_KEY`
 4. Run with Docker:
 ```bash
-docker-compose up --build
+docker compose up --build
 ```
 5. Use `sudo` if you get permission error:
 ```bash
-sudo docker-compose up --build
+sudo docker compose up --build
 ```
 
 ## API Documentation
